@@ -1,17 +1,17 @@
 Tenda AC18 Unauthorized stack overflow vulnerability
 ===
-**1.Affected version:**  
+**1.Affected version:** 
 ---
-V15.03.05.05_multi and V15.03.05.19_multi  
+V15.03.05.05_multi and V15.03.05.19_multi
 **2.Firmware download address**  
 ---
 https://www.tenda.com.cn/download/detail-2683.html  
-**3.Vulnerability details**  
+**3.Vulnerability details** 
 ---
 ![image](https://user-images.githubusercontent.com/104344137/183282100-85e46932-6173-430b-a81e-469fe6a7f381.png)  
 ![image](https://user-images.githubusercontent.com/104344137/183282105-865e29d1-da95-4a22-9d2d-5c8983d2a9c9.png)  
 In function saveParentControlInfo, the content obtained by the program from the urls parameter is passed to V24, and then the V24 is directly copied into the V17 + 80 stack through the strcpy function. There is no size check, so there is a stack overflow vulnerability. The attacker can easily perform a Deny of Service Attack or Remote Code Execution with carefully crafted overflow data.  
-**4.Recurring vulnerabilities and POC** 
+**4.Recurring vulnerabilities and POC**
 --- 
 In order to reproduce the vulnerability, the following steps can be followed:  
 1.Use the fat simulation firmware V15.03.05.19_multi  

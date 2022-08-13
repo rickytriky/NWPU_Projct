@@ -12,11 +12,10 @@ https://www.tenda.com.cn/download/detail-2683.html
 
 ![img](https://www.kdocs.cn/api/v3/office/copy/b1Y4dkNXVWo5aFdWc1hpOXJMdEFoNFhYQU1QbXlUbzFwTkRPbXJTOXVmM3lkQm95V1VrUTVLZEd1c3p4OE1wdkhaenpXcmQyZXYxdnZpT3g5eXBxclZYYjBFdTBYOTlQZ0ovejVvd0NQQnpBMm0vWXFlMS9zMEZhVFJpdHdTaEdydTFxNmxySWNLNFZaVUJmN09MRDhCcjNRbkIwZU5iYUZTTDArUENwOStWTkd5TlhwbktiZXZlaUpXWklLYnd2ZGVoTFlmWFExZDJRYStBdGRXblQ2RUtNU0VRN2UrZlAyVnZDblZyRHR5MXBva1d0Y25UbE0vTGNhSVV6/attach/object/dd5646441bc02e899633982e20f60963d5051b39)
 
-In function setSmartPowerManagement The v13 variable is obtained directly from the http request parameter time .
+In function setSmartPowerManagement， the v13 variable is obtained directly from the http request parameter time .
 Then v13 will be splice to stack by function sscanf without any security check, which causes
 stack overflow.
-So by POSTing the page /goform/PowerSaveSet with long time , the attacker can easily perform
-a Denial of Service(DoS).
+The attacker can easily perform a Deny of Service Attack or Remote Code Execution with carefully crafted overflow data.
 
 ## **4. Recurring vulnerabilities and POC**
 
